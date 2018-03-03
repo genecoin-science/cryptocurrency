@@ -15,7 +15,7 @@ contract CreateToken is StandardToken {
   string public constant SYMBOL = "GEN"; // solium-disable-line uppercase
   uint8 public constant DECIMALS = 8; // solium-disable-line uppercase
 
-  uint256 public constant INITIAL_SUPPLY = 100000 * (10 ** uint256(DECIMALS));
+  uint256 public constant INITIAL_SUPPLY = 100000000 * (10 ** uint256(DECIMALS));
 
   /**
    * @dev Constructor that gives msg.sender all of existing tokens.
