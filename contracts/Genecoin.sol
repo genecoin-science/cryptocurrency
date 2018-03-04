@@ -3,6 +3,11 @@ pragma solidity 0.4.18;
 import "./SafeMath.sol";
 import "./Ownable.sol";
 
+/**
+ * @title Genecoin
+ * @dev Based on ERC20 Token examples from OpenZeppelin. All tokens are pre-assigned to the creator.
+ */
+
 contract Genecoin is Ownable {
 
   using SafeMath for uint256;
@@ -15,8 +20,8 @@ contract Genecoin is Ownable {
 
   /** mapping and variables ERC20 + BurnableToken */
 
-  mapping (address => mapping (address => uint256)) internal allowed;
   mapping(address => uint256) balances;
+  mapping (address => mapping (address => uint256)) internal allowed;
   uint256 totalSupply_;
   string public constant name = "Genecoin"; // solium-disable-line uppercase
   string public constant symbol = "GEN"; // solium-disable-line uppercase
